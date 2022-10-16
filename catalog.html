@@ -14,7 +14,7 @@
             src="images/logo-sedona.svg"
             width="140"
             height="70"
-            alt="Логотип компании"
+            alt="Логотип компании."
           />
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -34,14 +34,15 @@
           <ul class="navigation-list navigation-user">
             <li class="navigation-item">
               <a class="navigation-link" href="#">
-                <span class="visually-hidden">Поиск</span>
-                <img src="images/icons/search.svg" alt="Поиск" />
+                <span class="visually-hidden">Поиск.</span>
+                <img src="images/icons/search.svg" alt="Поиск." />
               </a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">
-                <span class="visually-hidden">Избранное</span>
-                <img src="images/icons/heart.svg" alt="Избранное" />
+                <span class="visually-hidden">Избранное.</span>
+                <img src="images/icons/heart.svg" alt="Избранное." />
+                <span class="navigation-item-favourite-count">12</span>
               </a>
             </li>
             <li class="navigation-item">
@@ -62,15 +63,10 @@
                   <img
                     class="breadcrumbs-icon"
                     src="images/icons/home.svg"
-                    alt="Главная страница"
+                    alt="Главная страница."
                   />
                 </a>
               </li>
-              <img
-                class="breadcrumbs-icon"
-                src="images/icons/breadcrumbs.svg"
-                alt="Стрелка"
-              />
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link">Гостиницы</a>
               </li>
@@ -81,15 +77,22 @@
             action="https://echo.htmlacademy.ru/"
             method="get"
           >
-            <h2 class="visually-hidden">Фильтры гостиниц</h2>
+            <h2 class="visually-hidden">Фильтры гостиниц.</h2>
             <fieldset class="catalog-filters-group">
               <legend class="catalog-filters-title">Инфраструктура:</legend>
-              <label class="catalog-filters-label" for="pool">Бассейн</label>
               <input
                 class="catalog-filters-checkbox"
                 type="checkbox"
                 name="pool"
                 id="pool"
+                checked
+              />
+              <label class="catalog-filters-label" for="pool">Бассейн</label>
+              <input
+                class="catalog-filters-checkbox"
+                type="checkbox"
+                name="parking"
+                id="parking"
                 checked
               />
               <label class="catalog-filters-label" for="parking"
@@ -98,21 +101,13 @@
               <input
                 class="catalog-filters-checkbox"
                 type="checkbox"
-                name="parking"
-                id="parking"
-                checked
-              />
-              <label class="catalog-filters-label" for="wi-fi">Wi-Fi</label>
-              <input
-                class="catalog-filters-checkbox"
-                type="checkbox"
                 name="wi-fi"
                 id="wi-fi"
               />
+              <label class="catalog-filters-label" for="wi-fi">Wi-Fi</label>
             </fieldset>
             <fieldset class="catalog-filters-group">
               <legend class="catalog-filters-title">Тип Жилья:</legend>
-              <label class="catalog-filters-label" for="hotel">Гостиница</label>
               <input
                 class="catalog-filters-radio"
                 type="radio"
@@ -121,7 +116,7 @@
                 id="hotel"
                 checked
               />
-              <label class="catalog-filters-label" for="motel">Мотель</label>
+              <label class="catalog-filters-label" for="hotel">Гостиница</label>
               <input
                 class="catalog-filters-radio"
                 type="radio"
@@ -129,9 +124,7 @@
                 name="type"
                 id="motel"
               />
-              <label class="catalog-filters-label" for="appartments"
-                >Аппартаменты</label
-              >
+              <label class="catalog-filters-label" for="motel">Мотель</label>
               <input
                 class="catalog-filters-radio"
                 type="radio"
@@ -139,6 +132,9 @@
                 name="type"
                 id="appartments"
               />
+              <label class="catalog-filters-label" for="appartments"
+                >Аппартаменты</label
+              >
             </fieldset>
             <fieldset class="catalog-filters-group">
               <legend class="catalog-filters-title">Стоимость, ₽:</legend>
@@ -185,7 +181,7 @@
         </section>
         <section class="products">
           <header class="products-header">
-            <h2 class="visually-hidden">Варианты гостиниц</h2>
+            <h2 class="visually-hidden">Варианты гостиниц.</h2>
             <p class="products-result">Найдено гостиниц: 38</p>
             <select class="products-sorting" aria-label="Сортировка">
               <option value="cheap" selected>Сначала дешевые</option>
@@ -194,27 +190,27 @@
             </select>
             <div class="products-view">
               <a href="#" class="products-button">
-                <span class="visually-hidden">Показать карточки</span>
+                <span class="visually-hidden">Показать карточки.</span>
                 <img
                   class="products-button-icon"
                   src="images/icons/view-cards.svg"
-                  alt="Карточки"
+                  alt="Карточки."
                 />
               </a>
               <a class="products-button" href="#">
-                <span class="visually-hidden">Показать слайд-шоу</span>
+                <span class="visually-hidden">Показать слайд-шоу.</span>
                 <img
                   class="products-button-icon"
                   src="images/icons/view-slide.svg"
-                  alt="Слайд-шоу"
+                  alt="Слайд-шоу."
                 />
               </a>
               <a class="products-button" href="#">
-                <span class="visually-hidden">Показать список</span>
+                <span class="visually-hidden">Показать список.</span>
                 <img
                   class="products-button-icon"
                   src="images/icons/view-list.svg"
-                  alt="Список"
+                  alt="Список."
                 />
               </a>
             </div>
@@ -227,7 +223,7 @@
                   src="images/hotels/hotel-1.jpg"
                   width="300"
                   height="212"
-                  alt="Гостиница Amara Resort & Spa"
+                  alt="Гостиница Amara Resort & Spa."
                 />
                 <h3 class="products-card-title">Amara Resort & Spa</h3>
               </a>
@@ -272,7 +268,7 @@
                   src="images/hotels/hotel-2.jpg"
                   width="300"
                   height="212"
-                  alt="Гостиница Villas at Poco Diablo"
+                  alt="Гостиница Villas at Poco Diablo."
                 />
                 <h3 class="products-card-title">Villas at Poco Diablo</h3>
               </a>
@@ -319,7 +315,7 @@
                   src="images/hotels/hotel-3.jpg"
                   width="300"
                   height="212"
-                  alt="Гостиница Desert Quail Inn"
+                  alt="Гостиница Desert Quail Inn."
                 />
                 <h3 class="products-card-title">Desert Quail Inn</h3>
               </a>
@@ -359,7 +355,7 @@
                   src="images/hotels/hotel-4.jpg"
                   width="300"
                   height="212"
-                  alt="Гостиница GreenTree Inn"
+                  alt="Гостиница GreenTree Inn."
                 />
                 <h3 class="products-card-title">GreenTree Inn</h3>
               </a>
@@ -388,27 +384,27 @@
               </div>
             </div>
           </div>
-        </section>
-        <section class="pagination">
-          <h2 class="visually-hidden">Номера страниц</h2>
-          <ul class="pagination-list">
-            <li class="pagination-item pagination-item-current">
-              <a class="pagination-link">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
-            </li>
-            <li class="pagination-item pagination-item-dots">...</li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">10</a>
-            </li>
-          </ul>
+          <div class="pagination">
+            <h2 class="visually-hidden">Номера страниц.</h2>
+            <ul class="pagination-list">
+              <li class="pagination-item">
+                <a class="pagination-link pagination-link-current">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">4</a>
+              </li>
+              <li class="pagination-item pagination-item-dots">...</li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">10</a>
+              </li>
+            </ul>
+          </div>
         </section>
         <section class="subscription subscription-no-background">
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
@@ -421,7 +417,7 @@
             method="post"
           >
             <label class="visually-hidden" for="subscription-form-email"
-              >E-mail</label
+              >E-mail.</label
             >
             <input
               class="subscription-form-input"
@@ -441,21 +437,21 @@
         <ul class="social">
           <li class="social-item">
             <a class="social-link" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Вконтакте</span>
+              <span class="visually-hidden">Вконтакте.</span>
               <img
                 class="social-icon"
                 src="images/icons/vk.svg"
-                alt="Вконтакте"
+                alt="Вконтакте."
               />
             </a>
           </li>
           <li class="social-item">
             <a class="social-link" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Телеграм</span>
+              <span class="visually-hidden">Телеграм.</span>
               <img
                 class="social-icon"
                 src="images/icons/telegram.svg"
-                alt="Телеграм"
+                alt="Телеграм."
               />
             </a>
           </li>
@@ -464,11 +460,11 @@
               class="social-link"
               href="https://www.youtube.com/user/htmlacademyru"
             >
-              <span class="visually-hidden">Ютуб</span>
+              <span class="visually-hidden">Ютуб.</span>
               <img
                 class="social-icon"
                 src="images/icons/youtube.svg"
-                alt="Ютуб"
+                alt="Ютуб."
               />
             </a>
           </li>
@@ -482,7 +478,7 @@
             src="images/logo-html-academy.svg"
             width="115"
             height="33"
-            alt="Логотип html-академии"
+            alt="Логотип html-академии."
           />
         </a>
       </footer>
