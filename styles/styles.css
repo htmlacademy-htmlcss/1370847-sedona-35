@@ -74,15 +74,23 @@ body {
 }
 
 .navigation {
+  padding: 0 0 0 140px;
   display: flex;
   align-items: center;
   min-height: 64px;
+  position: relative;
+}
+
+.navigation-link-home {
+  align-self: start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .navigation-logo {
-  margin-right: 28px;
-  align-self: start;
-  z-index: 2;
+  display: block;
 }
 
 .navigation-list {
@@ -94,21 +102,54 @@ body {
   align-items: center;
 }
 
+.navigation-list:first-of-type {
+  margin: 0 0 0 28px;
+}
+
 .navigation-link {
   display: block;
   padding: 20px 16px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+  position: relative;
 }
 
 .navigation-user {
   margin-left: auto;
 }
 
+.navigation-user-image {
+  display: block;
+}
+
 .navigation-user .navigation-link {
   padding: 22px 12px;
 }
 
+.navigation-item-favourite {
+  margin-right: 20px;
+}
+
+.navigation-item-favourite-count {
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+  background-color: #7db54f;
+  position: absolute;
+  top: 11px;
+  right: 4px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 5px 2px;
+}
+
 .navigation-user .navigation-choice {
-  margin-left: 20px;
   padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
@@ -120,12 +161,17 @@ body {
 }
 
 .welcome {
-  background-image: url("../images/index-background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  padding: 51px 0 82px;
+  background: url("../images/index-background-bottom.svg") center bottom/100% auto no-repeat,
+  url("../images/index-background.jpg") center/cover no-repeat;
   background-color: #3f5e72;
   color: #ffffff;
   text-align: center;
+}
+
+.welcome-image {
+  display: block;
+  margin: 0 auto;
 }
 
 .sedona-town {
@@ -155,12 +201,84 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.advantages-item {
+  padding: 92px 85px 20px;
+  min-height: 384px;
+}
+
+.advantages-item-long {
+  grid-column: span 3;
+  display: flex;
+}
+
+.advantages-item-title,
+.advice-item-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantages-item-title {
+  margin: 0 0 62px;
+}
+
+.advice-item-title {
+  margin: 0;
+}
+
+.advantages-item-description {
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-item-long .advantages-item-title,
+.advantages-item-long .advantages-item-description {
+  color: #ffffff;
+}
+
+.advantages-item-description,
+.advice-item-description {
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+}
+
+.advice-item {
+  padding: 182px 85px 20px;
+  min-height: 384px;
+}
+
+.advice-item-accomodation {
+  background-image: url("../images/icons/house.svg");
+  background-repeat: no-repeat;
+  background-position: center 80px;
+}
+
+.advice-item-food {
+  background-image: url("../images/icons/burger.svg");
+  background-repeat: no-repeat;
+  background-position: center 81px;
+}
+
+.advice-item-souvenirs {
+  background-image: url("../images/icons/present.svg");
+  background-repeat: no-repeat;
+  background-position: center 78px;
 }
 
 .advice {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .subscription-on-background {
@@ -193,65 +311,6 @@ body {
 
 .advice-item-secondary-light {
   background-color: #f0f6f9;
-}
-
-.navigation-link {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #000000;
-  text-decoration: none;
-}
-
-.navigation-item-favourite-count {
-  font-size: 10px;
-  line-height: 10px;
-  color: #ffffff;
-  background-color: #7db54f;
-}
-
-.advantages-item-title,
-.advice-item-title {
-  margin: 0;
-  padding: 0;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  color: #000000;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.advantages-item-description {
-  margin: 0;
-  padding: 0;
-}
-
-.advantages-item-long .advantages-item-title,
-.advantages-item-long .advantages-item-description {
-  color: #ffffff;
-}
-
-.advantages-item-description,
-.advice-item-description {
-font-size: 18px;
-line-height: 21px;
-text-align: center;
-}
-
-.advice-item-accomodation {
-  background: url("../images/icons/house.svg");
-  background-repeat: no-repeat;
-}
-
-.advice-item-food {
-  background: url("../images/icons/burger.svg");
-  background-repeat: no-repeat;
-}
-
-.advice-item-souvenirs {
-  background: url("../images/icons/present.svg");
-  background-repeat: no-repeat;
 }
 
 .offer {
@@ -437,6 +496,7 @@ color: #000000;
 }
 
 .products-result {
+  margin: 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -471,33 +531,45 @@ color: #000000;
   border-radius: 4px;
 }
 
+.products-button-current {
+  border-color: #000000;
+}
+
 .products-button:last-child {
   margin-right: 0;
 }
 
 .products-grid {
-  padding: 0 0 40px 0;
+  margin: 0 0 40px;
+  padding: 0 0 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   border-bottom: 1px solid #e6e6e6;
 }
 
 .products-card {
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  max-width: 340px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 16px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
 
+.products-card-image {
+  margin: 0 0 16px;
+  display: block;
+}
+
 .products-card-link {
+  grid-column: 1/-1;
   text-decoration: none;
 }
 
 .products-card-title {
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -505,7 +577,13 @@ color: #000000;
   text-decoration: none;
 }
 
-.products-card-inline {
+.products-card-type {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.products-card-price {
+  justify-self: end;
   font-size: 18px;
   line-height: 21px;
 }
@@ -519,40 +597,56 @@ color: #000000;
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
+  border-radius: 4px;
 }
 
 .products-card-more {
+  padding: 8px;
+  text-align: center;
   background-color: #756157;
 }
 
 .products-card-favourite {
+  border: none;
   background-color: #82b3d3;
 }
 .products-card-favourite-active {
+  border: none;
   background-color: #7db54f;
 }
 
 .products-card-rating {
+  padding: 9px 5px 8px;
+  text-align: center;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   background-color: #f2f2f2;
+  border-radius: 4px;
 }
 
 .pagination-list {
-  margin: 40px 0 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   text-align: center;
 }
 
-.pagination-link {
+.pagination-item {
   margin: 0 8px 0 0;
-  padding: 12px 0;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
+}
+
+.pagination-link {
+  padding: 12px 3px;
   display: block;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   font-weight: 700;
   font-size: 20px;

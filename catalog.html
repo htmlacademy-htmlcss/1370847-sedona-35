@@ -9,13 +9,15 @@
     <div class="container">
       <header class="page-header">
         <nav class="navigation">
-          <img
-            class="navigation-logo"
-            src="images/logo-sedona.svg"
-            width="140"
-            height="70"
-            alt="Логотип компании."
-          />
+          <a class="navigation-logo-home" href="index.html">
+            <img
+              class="navigation-logo"
+              src="images/logo-sedona.svg"
+              width="140"
+              height="70"
+              alt="Логотип компании."
+            />
+          </a>
           <ul class="navigation-list">
             <li class="navigation-item">
               <a class="navigation-link" href="index.html">Главная</a>
@@ -38,7 +40,7 @@
                 <img src="images/icons/search.svg" alt="Поиск." />
               </a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item navigation-item-favourite">
               <a class="navigation-link" href="#">
                 <span class="visually-hidden">Избранное.</span>
                 <img src="images/icons/heart.svg" alt="Избранное." />
@@ -189,7 +191,7 @@
               <option value="popular">Сначала популярные</option>
             </select>
             <div class="products-view">
-              <a href="#" class="products-button">
+              <a href="#" class="products-button products-button-current">
                 <span class="visually-hidden">Показать карточки.</span>
                 <img
                   class="products-button-icon"
@@ -227,39 +229,33 @@
                 />
                 <h3 class="products-card-title">Amara Resort & Spa</h3>
               </a>
-              <div class="products-card-inline">
-                <span class="products-card-type">Гостиница</span>
-                <span class="products-card-price">От 4000 ₽</span>
+              <span class="products-card-type">Гостиница</span>
+              <span class="products-card-price">От 4000 ₽</span>
+              <a class="products-card-more" href="#">Подробнее</a>
+              <button class="products-card-favourite">В избранное</button>
+              <div class="products-card-stars">
+                <img
+                  class="products-card-star"
+                  src="images/icons/star.svg"
+                  alt="Звезда"
+                />
+                <img
+                  class="products-card-star"
+                  src="images/icons/star.svg"
+                  alt="Звезда"
+                />
+                <img
+                  class="products-card-star"
+                  src="images/icons/star.svg"
+                  alt="Звезда"
+                />
+                <img
+                  class="products-card-star"
+                  src="images/icons/star.svg"
+                  alt="Звезда"
+                />
               </div>
-              <div class="products-card-inline">
-                <a class="products-card-more" href="#">Подробнее</a>
-                <button class="products-card-favourite">В избранное</button>
-              </div>
-              <div class="products-card-inline">
-                <div class="products-card-stars">
-                  <img
-                    class="products-card-star"
-                    src="images/icons/star.svg"
-                    alt="Звезда"
-                  />
-                  <img
-                    class="products-card-star"
-                    src="images/icons/star.svg"
-                    alt="Звезда"
-                  />
-                  <img
-                    class="products-card-star"
-                    src="images/icons/star.svg"
-                    alt="Звезда"
-                  />
-                  <img
-                    class="products-card-star"
-                    src="images/icons/star.svg"
-                    alt="Звезда"
-                  />
-                </div>
-                <div class="products-card-rating">Рейтинг: 8,5</div>
-              </div>
+              <div class="products-card-rating">Рейтинг: 8,5</div>
             </div>
             <div class="products-card">
               <a class="products-card-link" href="#">
@@ -272,41 +268,35 @@
                 />
                 <h3 class="products-card-title">Villas at Poco Diablo</h3>
               </a>
-              <div class="products-card-inline">
-                <span class="products-card-type">Гостиница</span>
-                <span class="products-card-price">От 5000 ₽</span>
+              <span class="products-card-type">Гостиница</span>
+              <span class="products-card-price">От 5000 ₽</span>
+              <a class="products-card-more" href="#">Подробнее</a>
+              <button class="products-card-favourite-active">
+                В избранном
+              </button>
+              <div class="products-card-stars">
+                <img
+                  class="products-card-star"
+                  src="images/icons/star.svg"
+                  alt="Звезда"
+                />
+                <img
+                  class="products-card-star"
+                  src="images/icons/star.svg"
+                  alt="Звезда"
+                />
+                <img
+                  class="products-card-star"
+                  src="images/icons/star.svg"
+                  alt="Звезда"
+                />
+                <img
+                  class="products-card-star"
+                  src="images/icons/star.svg"
+                  alt="Звезда"
+                />
               </div>
-              <div class="products-card-inline">
-                <a class="products-card-more" href="#">Подробнее</a>
-                <button class="products-card-favourite-active">
-                  В избранном
-                </button>
-              </div>
-              <div class="products-card-inline">
-                <div class="products-card-stars">
-                  <img
-                    class="products-card-star"
-                    src="images/icons/star.svg"
-                    alt="Звезда"
-                  />
-                  <img
-                    class="products-card-star"
-                    src="images/icons/star.svg"
-                    alt="Звезда"
-                  />
-                  <img
-                    class="products-card-star"
-                    src="images/icons/star.svg"
-                    alt="Звезда"
-                  />
-                  <img
-                    class="products-card-star"
-                    src="images/icons/star.svg"
-                    alt="Звезда"
-                  />
-                </div>
-                <div class="products-card-rating">Рейтинг: 9,2</div>
-              </div>
+              <div class="products-card-rating">Рейтинг: 9,2</div>
             </div>
             <div class="products-card">
               <a class="products-card-link" href="#">
@@ -319,34 +309,28 @@
                 />
                 <h3 class="products-card-title">Desert Quail Inn</h3>
               </a>
-              <div class="products-card-inline">
-                <span class="products-card-type">Гостиница</span>
-                <span class="products-card-price">От 2500 ₽</span>
+              <span class="products-card-type">Гостиница</span>
+              <span class="products-card-price">От 2500 ₽</span>
+              <a class="products-card-more" href="#">Подробнее</a>
+              <button class="products-card-favourite">В избранное</button>
+              <div class="products-card-stars">
+                <img
+                  class="products-card-star"
+                  src="images/icons/star.svg"
+                  alt="Звезда"
+                />
+                <img
+                  class="products-card-star"
+                  src="images/icons/star.svg"
+                  alt="Звезда"
+                />
+                <img
+                  class="products-card-star"
+                  src="images/icons/star.svg"
+                  alt="Звезда"
+                />
               </div>
-              <div class="products-card-inline">
-                <a class="products-card-more" href="#">Подробнее</a>
-                <button class="products-card-favourite">В избранное</button>
-              </div>
-              <div class="products-card-inline">
-                <div class="products-card-stars">
-                  <img
-                    class="products-card-star"
-                    src="images/icons/star.svg"
-                    alt="Звезда"
-                  />
-                  <img
-                    class="products-card-star"
-                    src="images/icons/star.svg"
-                    alt="Звезда"
-                  />
-                  <img
-                    class="products-card-star"
-                    src="images/icons/star.svg"
-                    alt="Звезда"
-                  />
-                </div>
-                <div class="products-card-rating">Рейтинг: 6,9</div>
-              </div>
+              <div class="products-card-rating">Рейтинг: 6,9</div>
             </div>
             <div class="products-card">
               <a class="products-card-link" href="#">
@@ -359,29 +343,23 @@
                 />
                 <h3 class="products-card-title">GreenTree Inn</h3>
               </a>
-              <div class="products-card-inline">
-                <span class="products-card-type">Гостиница</span>
-                <span class="products-card-price">От 1500 ₽</span>
+              <span class="products-card-type">Гостиница</span>
+              <span class="products-card-price">От 1500 ₽</span>
+              <a class="products-card-more" href="#">Подробнее</a>
+              <button class="products-card-favourite">В избранное</button>
+              <div class="products-card-stars">
+                <img
+                  class="products-card-star"
+                  src="images/icons/star.svg"
+                  alt="Звезда"
+                />
+                <img
+                  class="products-card-star"
+                  src="images/icons/star.svg"
+                  alt="Звезда"
+                />
               </div>
-              <div class="products-card-inline">
-                <a class="products-card-more" href="#">Подробнее</a>
-                <button class="products-card-favourite">В избранное</button>
-              </div>
-              <div class="products-card-inline">
-                <div class="products-card-stars">
-                  <img
-                    class="products-card-star"
-                    src="images/icons/star.svg"
-                    alt="Звезда"
-                  />
-                  <img
-                    class="products-card-star"
-                    src="images/icons/star.svg"
-                    alt="Звезда"
-                  />
-                </div>
-                <div class="products-card-rating">Рейтинг: 5,0</div>
-              </div>
+              <div class="products-card-rating">Рейтинг: 5,0</div>
             </div>
           </div>
           <div class="pagination">
