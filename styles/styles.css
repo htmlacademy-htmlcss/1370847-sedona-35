@@ -162,7 +162,7 @@ body {
 
 .welcome {
   padding: 51px 0 82px;
-  background: url("../images/index-background-bottom.svg") center bottom/100% auto no-repeat,
+  background: url("../images/index-background-bottom.svg") center calc(100% + 2px) no-repeat,
   url("../images/index-background.jpg") center/cover no-repeat;
   background-color: #3f5e72;
   color: #ffffff;
@@ -207,6 +207,11 @@ body {
 
 .advantages-item {
   padding: 92px 85px 20px;
+  min-height: 384px;
+}
+
+.advantages-item:not(.advantages-item-long) {
+  padding: 103px 85px 20px;
   min-height: 384px;
 }
 
@@ -401,6 +406,7 @@ color: #000000;
   background-color: #82b3d3;
   border: none;
   border-radius: 0 4px 4px 0;
+  cursor: pointer;
 }
 
 .page-footer {
@@ -464,24 +470,20 @@ color: #000000;
 
 .catalog-filters-submit,
 .catalog-filters-reset {
+  padding: 8px 50px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
   text-transform: uppercase;
-}
-
-.catalog-filters-submit {
-  padding: 8px 50px;
-  border: none;
-  border-radius: 4px;
   background-color: #82b3d3;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }
 
 .catalog-filters-reset {
-  padding: 8px 57px;
-  border: none;
-  background: none;
+  background: transparent;
 }
 
 .products {
@@ -589,8 +591,7 @@ color: #000000;
 }
 
 .products-card-more,
-.products-card-favourite,
-.products-card-favourite-active {
+.products-card-favourite {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -598,6 +599,9 @@ color: #000000;
   text-decoration: none;
   color: #ffffff;
   border-radius: 4px;
+  border: none;
+  background-color: #82b3d3;
+  cursor: pointer;
 }
 
 .products-card-more {
@@ -606,10 +610,6 @@ color: #000000;
   background-color: #756157;
 }
 
-.products-card-favourite {
-  border: none;
-  background-color: #82b3d3;
-}
 .products-card-favourite-active {
   border: none;
   background-color: #7db54f;
@@ -647,7 +647,7 @@ color: #000000;
   padding: 12px 3px;
   display: block;
   min-width: 60px;
-  height: 60px;
+  min-height: 60px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;

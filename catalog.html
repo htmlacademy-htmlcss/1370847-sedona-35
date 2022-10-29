@@ -9,7 +9,7 @@
     <div class="container">
       <header class="page-header">
         <nav class="navigation">
-          <a class="navigation-logo-home" href="index.html">
+          <a class="navigation-link-home" href="index.html">
             <img
               class="navigation-logo"
               src="images/logo-sedona.svg"
@@ -20,35 +20,43 @@
           </a>
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" href="index.html">Главная</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="about.html">О Седоне</a>
-            </li>
-            <li class="navigation-item">
               <a
                 class="navigation-link navigation-link-current"
-                href="catalog.html"
-                >Гостиницы</a
+                href="index.html"
+                >Главная</a
               >
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">О Седоне</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-list navigation-user">
             <li class="navigation-item">
               <a class="navigation-link" href="#">
-                <span class="visually-hidden">Поиск.</span>
-                <img src="images/icons/search.svg" alt="Поиск." />
+                <span class="visually-hidden">Поиск</span>
+                <img
+                  class="navigation-user-image"
+                  src="images/icons/search.svg"
+                  alt="Поиск."
+                />
               </a>
             </li>
             <li class="navigation-item navigation-item-favourite">
               <a class="navigation-link" href="#">
                 <span class="visually-hidden">Избранное.</span>
-                <img src="images/icons/heart.svg" alt="Избранное." />
+                <img
+                  class="navigation-user-image"
+                  src="images/icons/heart.svg"
+                  alt="Избранное."
+                />
                 <span class="navigation-item-favourite-count">12</span>
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-choice" href="#">
+              <a class="navigation-link navigation-choice" href="catalog.html">
                 Хочу сюда!
               </a>
             </li>
@@ -271,7 +279,9 @@
               <span class="products-card-type">Гостиница</span>
               <span class="products-card-price">От 5000 ₽</span>
               <a class="products-card-more" href="#">Подробнее</a>
-              <button class="products-card-favourite-active">
+              <button
+                class="products-card-favourite products-card-favourite-active"
+              >
                 В избранном
               </button>
               <div class="products-card-stars">
