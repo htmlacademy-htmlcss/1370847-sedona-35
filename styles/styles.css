@@ -206,13 +206,12 @@ body {
 }
 
 .advantages-item {
-  padding: 92px 85px 20px;
+  padding: 103px 85px 20px;
   min-height: 384px;
 }
 
-.advantages-item:not(.advantages-item-long) {
-  padding: 103px 85px 20px;
-  min-height: 384px;
+.advantages-item-long .advantages-item {
+  padding: 92px 85px 20px;
 }
 
 .advantages-item-long {
@@ -222,6 +221,7 @@ body {
 
 .advantages-item-title,
 .advice-item-title {
+  margin: 0 0 30px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -230,12 +230,13 @@ body {
   text-align: center;
 }
 
-.advantages-item-title {
-  margin: 0 0 62px;
-}
+.advantages-item-title::after {
+  content: "";
+  margin: 30px auto;
+  display: block;
+  width: 60px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 
-.advice-item-title {
-  margin: 0;
 }
 
 .advantages-item-description {
@@ -246,6 +247,10 @@ body {
 .advantages-item-long .advantages-item-title,
 .advantages-item-long .advantages-item-description {
   color: #ffffff;
+}
+
+.advantages-item-long .advantages-item-title::after {
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .advantages-item-description,
@@ -354,7 +359,7 @@ text-align: center;
 }
 
 .subscription {
-padding: 96px 30px 104px;
+padding: 97px 30px 104px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -393,6 +398,10 @@ color: #000000;
   border: none;
   background: #f2f2f2;
   border-radius: 4px 0 0 4px;
+}
+
+.subscription-form-input::placeholder {
+  font-family: inherit;
 }
 
 .subscription-form-submit {
