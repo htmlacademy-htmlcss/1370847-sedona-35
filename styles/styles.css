@@ -346,14 +346,6 @@ text-align: center;
   color: #ffffff;
 }
 
-.catalog-filters {
-  background-image: url("../images/filter.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-color: #3f5e72;
-  color: #ffffff;
-}
-
 .advantages-item-primary {
   background-color: #82b3d3;
 }
@@ -597,22 +589,34 @@ color: #000000;
   display: block;
 }
 
-.page-footer-logo:hover {
+.page-footer-link:hover .page-footer-logo {
   fill: #756157;
 }
 
-.page-footer-logo:focus {
+.page-footer-link:focus .page-footer-logo {
   fill: #756157;
+}
+
+.page-footer-link:focus {
   box-shadow: inset 0 0 3px 1px rgba(130, 179, 211, 0.5);
   outline: none;
 }
 
-.page-footer-logo:active {
+.page-footer-link:active .page-footer-logo {
   fill: rgba(117, 97, 87, 0.3);;
 }
 
+.catalog-filters {
+  padding: 35px 70px 70px;
+  background-image: url("../images/filter.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #3f5e72;
+  color: #ffffff;
+}
+
 .catalog-filters-header-title {
-  margin: 0;
+  margin: 0 0 8px 0;
   padding: 0;
   font-weight: 700;
   font-size: 60px;
@@ -620,11 +624,16 @@ color: #000000;
 }
 
 .breadcrumbs {
-  margin: 0;
+  margin: 0 0 40px 0;
   padding: 0;
   display: flex;
   align-items: center;
   list-style: none;
+}
+
+.breadcrumbs-item {
+  font-size: 16px;
+  line-height: 21px;
 }
 
 .breadcrumbs-item:not(:last-child) {
@@ -638,13 +647,17 @@ color: #000000;
   margin-left: 10px;
   display: block;
   width: 8px;
-  height: 10px;
+  height: 21px;
   background: url("../images/icons/breadcrumbs.svg") center center/contain no-repeat;
 }
 
-.breadcrumbs-link {
-  font-size: 16px;
-  line-height: 21px;
+.breadcrumbs-link:hover .breadcrumbs-icon {
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumbs-link:focus {
+  box-shadow: inset 0 0 3px 1px rgba(255, 255, 255, .9);
+  outline: none;
 }
 
 .breadcrumbs-icon {
@@ -802,6 +815,7 @@ color: #000000;
 
 .products-button:focus {
   border-color: #68a2ca;
+  outline: none;
 }
 
 .products-grid {
@@ -928,6 +942,27 @@ color: #000000;
 
 .products-card-favourite-active:disabled {
   background-color: #e5e5e5;
+}
+
+.products-card-stars-four {
+  background: url("../images/icons/star.svg") 0 center,
+              url("../images/icons/star.svg") 24px center,
+              url("../images/icons/star.svg") 48px center,
+              url("../images/icons/star.svg") 72px center;
+  background-repeat: no-repeat;
+}
+
+.products-card-stars-three {
+  background: url("../images/icons/star.svg") 0 center,
+              url("../images/icons/star.svg") 24px center,
+              url("../images/icons/star.svg") 48px center;
+  background-repeat: no-repeat;
+}
+
+.products-card-stars-two {
+  background: url("../images/icons/star.svg") 0 center,
+              url("../images/icons/star.svg") 24px center;
+  background-repeat: no-repeat;
 }
 
 .products-card-rating {
