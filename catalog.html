@@ -90,7 +90,7 @@
             method="get"
           >
             <h2 class="visually-hidden">Фильтры гостиниц.</h2>
-            <fieldset class="catalog-filters-group">
+            <fieldset class="catalog-filters-group catalog-filters-group-facilities">
               <legend class="catalog-filters-title">Инфраструктура:</legend>
               <input
                 class="catalog-filters-checkbox"
@@ -118,7 +118,7 @@
               />
               <label class="catalog-filters-label" for="wi-fi">Wi-Fi</label>
             </fieldset>
-            <fieldset class="catalog-filters-group">
+            <fieldset class="catalog-filters-group catalog-filters-group-accommodation">
               <legend class="catalog-filters-title">Тип Жилья:</legend>
               <input
                 class="catalog-filters-radio"
@@ -148,34 +148,38 @@
                 >Аппартаменты</label
               >
             </fieldset>
-            <fieldset class="catalog-filters-group">
+            <fieldset class="catalog-filters-group catalog-filters-group-price">
               <legend class="catalog-filters-title">Стоимость, ₽:</legend>
-              <div class="catalog-filters-price">
+              <div class="range-wrapper-inputs">
                 <label
                   class="visually-hidden"
-                  for="catalog-filters-from"
+                  for="range-from"
                 ></label>
                 <input
-                  class="catalog-filters-text"
+                  class="range-input"
                   type="text"
                   value="0"
-                  id="catalog-filters-from"
+                  id="range-from"
                 />
-                <label class="visually-hidden" for="catalog-filters-to"></label>
+                <label class="visually-hidden" for="range-to"></label>
                 <input
-                  class="catalog-filters-text"
+                  class="range-input"
                   type="text"
                   value="9000"
-                  id="catalog-filters-to"
+                  id="range-to"
                 />
               </div>
-              <input
-                class="catalog-filters-range"
-                type="range"
-                min="0"
-                max="12000"
-                value="9000"
-              />
+              <div class="range">
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 42px; width: 136px">
+                    <button class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
             </fieldset>
             <div class="catalog-filters-buttons">
               <input

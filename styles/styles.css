@@ -678,6 +678,75 @@ color: #000000;
   line-height: 23px;
 }
 
+.catalog-filters-form {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 70px;
+}
+
+.catalog-filters-group {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.catalog-filters-group-facilities,
+.catalog-filters-group-accommodation {
+  width: 150px;
+}
+
+.catalog-filters-group-price {
+  width: 288px;
+  margin-left: auto;
+}
+
+.range-scale {
+  position: relative;
+  margin-top: 44px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background-color: #82b3d3;
+}
+
+.range-toggle:active,
+.range-toggle:focus {
+  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.catalog-filters-buttons {
+  width: 191px;
+}
+
 .catalog-filters-submit,
 .catalog-filters-reset {
   padding: 8px 50px;
