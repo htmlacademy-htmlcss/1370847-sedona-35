@@ -607,10 +607,10 @@ color: #000000;
 }
 
 .catalog-filters {
-  padding: 35px 70px 70px;
+  padding: 35px 70px 73px;
   background-image: url("../images/filter.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-color: #3f5e72;
   color: #ffffff;
 }
@@ -671,11 +671,72 @@ color: #000000;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  margin-bottom: 32px;
 }
 
 .catalog-filters-label {
+  position: relative;
+  padding-left: 36px;
   font-size: 18px;
   line-height: 23px;
+}
+
+.catalog-filters-label:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.catalog-filters-label:hover .catalog-filters-mark {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.catalog-filters-label:focus {
+  outline: none;
+}
+
+.catalog-filters-label:focus-within .catalog-filters-mark {
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.catalog-filters-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.catalog-filters-mark-radio {
+  border-radius: 50%;
+}
+
+.catalog-filters-mark-radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+}
+
+.catalog-filters-checkbox:checked + .catalog-filters-mark {
+  background: #ffffff url("../images/icons/check.svg") center center no-repeat;
+}
+
+.catalog-filters-radio:checked + .catalog-filters-mark-radio::before {
+  display: block;
+}
+
+.catalog-filters-checkbox:disabled + .catalog-filters-mark,
+.catalog-filters-radio:disabled + .catalog-filters-mark-radio {
+  opacity: 0.5;
+  cursor: auto;
 }
 
 .catalog-filters-form {
@@ -687,6 +748,8 @@ color: #000000;
 .catalog-filters-group {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
   border: none;
 }
 
@@ -698,6 +761,69 @@ color: #000000;
 .catalog-filters-group-price {
   width: 288px;
   margin-left: auto;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  column-gap: 2px;
+}
+
+.range-input {
+  padding: 12px 44px 12px 20px;
+  width: 100%;
+  font-family: "PT Sans", serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  background: #F2F2F2;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input-wrapper {
+  position: relative;
+  width: 50%;
+}
+
+.range-input-wrapper::after {
+  content: "от";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-input-wrapper:first-of-type .range-input {
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input-wrapper:last-of-type .range-input {
+  border-radius: 0 4px 4px 0;
+}
+
+.range-input:hover {
+  background: #e6e6e6;
+}
+
+.range-input:focus {
+  background: #e6e6e6;
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.range-input:active {
+  outline: none;
+  box-shadow: 0 0 0 2px #000000;
 }
 
 .range-scale {
@@ -744,12 +870,15 @@ color: #000000;
 }
 
 .catalog-filters-buttons {
+  margin-top: auto;
   width: 191px;
 }
 
 .catalog-filters-submit,
 .catalog-filters-reset {
-  padding: 8px 50px;
+  padding: 8px 10px;
+  max-width: 191px;
+  width: 100%;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -759,6 +888,10 @@ color: #000000;
   border-radius: 4px;
   border: none;
   cursor: pointer;
+}
+
+.catalog-filters-submit {
+  margin-bottom: 32px;
 }
 
 .catalog-filters-submit:hover {
@@ -780,6 +913,8 @@ color: #000000;
 
 .catalog-filters-reset {
   background: transparent;
+  position: relative;
+  top: 3px;
 }
 
 .catalog-filters-reset:hover {
@@ -821,7 +956,8 @@ color: #000000;
 
 .products-sorting {
   margin-left: auto;
-  padding: 14px 20px;
+  padding: 11px 16px;
+  width: 292px;
   font-size: 18px;
   line-height: 21px;
   border: 2px solid #e5e5e5;
@@ -888,11 +1024,12 @@ color: #000000;
 }
 
 .products-grid {
-  margin: 0 0 40px;
+  margin: 0 0 39px;
   padding: 0 0 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 18px;
   border-bottom: 1px solid #e6e6e6;
 }
 

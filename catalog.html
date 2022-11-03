@@ -92,86 +92,95 @@
             <h2 class="visually-hidden">Фильтры гостиниц.</h2>
             <fieldset class="catalog-filters-group catalog-filters-group-facilities">
               <legend class="catalog-filters-title">Инфраструктура:</legend>
-              <input
-                class="catalog-filters-checkbox"
-                type="checkbox"
-                name="pool"
-                id="pool"
-                checked
-              />
-              <label class="catalog-filters-label" for="pool">Бассейн</label>
-              <input
-                class="catalog-filters-checkbox"
-                type="checkbox"
-                name="parking"
-                id="parking"
-                checked
-              />
-              <label class="catalog-filters-label" for="parking"
-                >Парковка</label
-              >
-              <input
-                class="catalog-filters-checkbox"
-                type="checkbox"
-                name="wi-fi"
-                id="wi-fi"
-              />
-              <label class="catalog-filters-label" for="wi-fi">Wi-Fi</label>
+              <label class="catalog-filters-label">
+                <input
+                  class="catalog-filters-checkbox visually-hidden"
+                  type="checkbox"
+                  name="pool"
+                  checked
+                />
+                <span class="catalog-filters-mark"></span>
+                <span class="catalog-filters-label-text">Бассейн</span>
+              </label>
+              <label class="catalog-filters-label">
+                <input
+                  class="catalog-filters-checkbox visually-hidden"
+                  type="checkbox"
+                  name="parking"
+                  checked
+                />
+                <span class="catalog-filters-mark"></span>
+                <span class="catalog-filters-label-text">Парковка</span>
+              </label>
+              <label class="catalog-filters-label">
+                <input
+                  class="catalog-filters-checkbox visually-hidden"
+                  type="checkbox"
+                  name="wi-fi"
+                />
+                <span class="catalog-filters-mark"></span>
+                <span class="catalog-filters-label-text">Wi-Fi</span>
+              </label>
             </fieldset>
             <fieldset class="catalog-filters-group catalog-filters-group-accommodation">
               <legend class="catalog-filters-title">Тип Жилья:</legend>
-              <input
-                class="catalog-filters-radio"
-                type="radio"
-                value="hotel"
-                name="type"
-                id="hotel"
-                checked
-              />
-              <label class="catalog-filters-label" for="hotel">Гостиница</label>
-              <input
-                class="catalog-filters-radio"
-                type="radio"
-                value="motel"
-                name="type"
-                id="motel"
-              />
-              <label class="catalog-filters-label" for="motel">Мотель</label>
-              <input
-                class="catalog-filters-radio"
-                type="radio"
-                value="appartments"
-                name="type"
-                id="appartments"
-              />
-              <label class="catalog-filters-label" for="appartments"
-                >Аппартаменты</label
-              >
+              <label class="catalog-filters-label">
+                <input
+                  class="catalog-filters-radio visually-hidden"
+                  type="radio"
+                  value="hotel"
+                  name="type"
+                  checked
+                />
+                <span class="catalog-filters-mark catalog-filters-mark-radio"></span>
+                <span class="catalog-filters-label-text">Гостиница</span>
+              </label>
+              <label class="catalog-filters-label ">
+                <input
+                  class="catalog-filters-radio visually-hidden"
+                  type="radio"
+                  value="motel"
+                  name="type"
+                />
+                <span class="catalog-filters-mark catalog-filters-mark-radio"></span>
+                <span class="catalog-filters-label-text">Мотель</span>
+              </label>
+              <label class="catalog-filters-label">
+                <input
+                  class="catalog-filters-radio visually-hidden"
+                  type="radio"
+                  value="appartments"
+                  name="type"
+                />
+                <span class="catalog-filters-mark catalog-filters-mark-radio"></span>
+                <span class="catalog-filters-label-text">Аппартаменты</span>
+              </label>
             </fieldset>
             <fieldset class="catalog-filters-group catalog-filters-group-price">
               <legend class="catalog-filters-title">Стоимость, ₽:</legend>
               <div class="range-wrapper-inputs">
-                <label
+                <div class="range-input-wrapper"><label
                   class="visually-hidden"
                   for="range-from"
                 ></label>
                 <input
                   class="range-input"
-                  type="text"
+                  type="number"
                   value="0"
                   id="range-from"
-                />
+                /></div>
+                <div class="range-input-wrapper">
                 <label class="visually-hidden" for="range-to"></label>
                 <input
                   class="range-input"
-                  type="text"
+                  type="number"
                   value="9000"
-                  id="range-to"
-                />
+                  id="range-to"/>
+                </div>
               </div>
               <div class="range">
                 <div class="range-scale">
-                  <div class="range-bar" style="left: 42px; width: 136px">
+                  <div class="range-bar" style="left: 10px; width: 206px">
                     <button class="range-toggle toggle-min">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
