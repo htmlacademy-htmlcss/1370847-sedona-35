@@ -205,6 +205,7 @@ body {
 
 .navigation-choice:disabled {
   background-color: #e5e5e5;
+  cursor: auto;
 }
 
 .welcome {
@@ -409,6 +410,7 @@ text-align: center;
 
 .offer-link:disabled {
   background-color: #e5e5e5;
+  cursor: auto;
 }
 
 .subscription {
@@ -502,6 +504,7 @@ color: #000000;
 
 .subscription-form-submit:disabled {
   background-color: #e5e5e5;
+  cursor: auto;
 }
 
 .page-footer {
@@ -748,14 +751,10 @@ color: #000000;
 .catalog-filters-group {
   padding: 0;
   margin: 0;
+  width: 150px;
   display: flex;
   flex-direction: column;
   border: none;
-}
-
-.catalog-filters-group-facilities,
-.catalog-filters-group-accommodation {
-  width: 150px;
 }
 
 .catalog-filters-group-price {
@@ -795,6 +794,10 @@ color: #000000;
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.range-input-wrapper:last-child::after {
+  content: "до";
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -879,6 +882,7 @@ color: #000000;
   padding: 8px 10px;
   max-width: 191px;
   width: 100%;
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -891,7 +895,7 @@ color: #000000;
 }
 
 .catalog-filters-submit {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .catalog-filters-submit:hover {
@@ -909,6 +913,7 @@ color: #000000;
 
 .catalog-filters-submit:disabled {
   background-color: #e5e5e5;
+  cursor: auto;
 }
 
 .catalog-filters-reset {
@@ -932,6 +937,7 @@ color: #000000;
 
 .catalog-filters-reset:disabled {
   color: rgba(255, 255, 255, 0.1);
+  cursor: auto;
 }
 
 .products {
@@ -980,6 +986,7 @@ color: #000000;
 .products-sorting:disabled {
   border-color: rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
+  cursor: auto;
 }
 
 .products-view {
@@ -1075,6 +1082,7 @@ color: #000000;
 
 .products-card-more,
 .products-card-favourite {
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -1102,6 +1110,7 @@ color: #000000;
 
 .products-card-favourite:disabled {
   background-color: #e5e5e5;
+  cursor: auto;
 }
 
 .products-card-more {
@@ -1125,6 +1134,7 @@ color: #000000;
 
 .products-card-more:disabled {
   background-color: #e5e5e5;
+  cursor: auto;
 }
 
 .products-card-favourite-active {
@@ -1148,6 +1158,7 @@ color: #000000;
 
 .products-card-favourite-active:disabled {
   background-color: #e5e5e5;
+  cursor: auto;
 }
 
 .products-card-stars-four {
@@ -1238,4 +1249,342 @@ color: #000000;
   justify-content: center;
   width: 60px;
   height: 60px;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(242, 242, 242, 0.8);
+  z-index: 3;
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-search {
+  width: 717px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active::before,
+.modal-close-button:active::after {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-close-button:disabled {
+  background-color: #e5e5e5;
+  cursor: auto;
+}
+
+.modal-title {
+  margin: 0 0 64px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.search-form-inline {
+  margin: 0 0 23px 0;
+  display: flex;
+  column-gap: 18px;
+}
+
+.search-form-inline-wrapper {
+  margin: 0 0 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-form-label {
+  margin-top: 12px;
+  flex-basis: 119px;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.search-form-label-child {
+  flex-basis: 49px;
+}
+
+.search-form-input-wrapper {
+  flex-grow: 1;
+}
+
+.search-form-input {
+  margin: 0 0 4px 0;
+  padding: 12px 60px 12px 20px;
+  width: 100%;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  background: #f2f2f2 url("../images/icons/calendar.svg") calc(100% - 20px) center no-repeat;
+  border-radius: 4px;
+  border: none;
+ }
+
+ .search-form-input:hover {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #e6e6e6;
+ }
+
+ .search-form-input:focus {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #e6e6e6;
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+ }
+
+ .search-form-input:active {
+  box-shadow: 0 0 0 2px #000000;
+ }
+
+ .search-form-input:disabled {
+  opacity: 0.5;
+  cursor: auto;
+ }
+
+.search-form-input-message {
+  display: block;
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.search-form-input-message-error {
+  color: #ff5757;
+}
+
+.search-form-input-number-wrapper {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  border-radius: 4px;
+  background: #f2f2f2;
+}
+
+.search-form-button {
+  padding: 0;
+  fill: rgba(117, 97, 87, 0.3);
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 4px;
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+.search-form-button:hover {
+  fill: #000000;
+}
+
+.search-form-button:focus {
+  fill: #000000;
+  outline: none;
+  box-shadow: 0 0 0 3px #82b3d3;
+}
+
+.search-form-button:active {
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.search-form-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+}
+
+.search-form-input-number {
+  width: 31px;
+  padding: 12px 3px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  border: none;
+  background: #f2f2f2;
+  text-align: center;
+  appearance: textfield;
+}
+
+.search-form-input-number:hover {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #e6e6e6;
+ }
+
+ .search-form-input-number:focus {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #e6e6e6;
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+ }
+
+ .search-form-input-number:active {
+  box-shadow: 0 0 0 2px #000000;
+ }
+
+ .search-form-input-number:disabled {
+  opacity: 0.5;
+  cursor: auto;
+ }
+
+.search-form-input-number::-webkit-outer-spin-button,
+.search-form-input-number::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.tooltip {
+  position: relative;
+  align-self: center;
+}
+
+.tooltip-toggle {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 50%;
+  background-color: #83b3d3;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  transform: translateX(-50%) scale(1);
+}
+
+.tooltip-icon {
+  fill: #ffffff;
+}
+
+.tooltip-text {
+  padding: 18px 18px 24px 22px;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 100%;
+  margin-top: 15px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  z-index: 1;
+  width: 256px;
+  transition: 0.2s;
+}
+
+.tooltip-text:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position:absolute;
+  transform: translateY(50%) rotate(45deg);
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+  background: #333333;
+}
+
+.search-form-submit {
+  padding: 18px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  background: #83b3d3;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.search-form-submit:hover {
+  background-color: #68a2ca;
+}
+
+.search-form-submit:focus {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.search-form-submit:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-form-submit:disabled {
+  background-color: #e5e5e5;
+  cursor: auto;
 }
