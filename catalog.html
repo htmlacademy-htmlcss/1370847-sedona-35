@@ -90,7 +90,7 @@
             method="get"
           >
             <h2 class="visually-hidden">Фильтры гостиниц.</h2>
-            <fieldset class="catalog-filters-group catalog-filters-group-facilities">
+            <fieldset class="catalog-filters-group">
               <legend class="catalog-filters-title">Инфраструктура:</legend>
               <label class="catalog-filters-label">
                 <input
@@ -122,7 +122,7 @@
                 <span class="catalog-filters-label-text">Wi-Fi</span>
               </label>
             </fieldset>
-            <fieldset class="catalog-filters-group catalog-filters-group-accommodation">
+            <fieldset class="catalog-filters-group">
               <legend class="catalog-filters-title">Тип Жилья:</legend>
               <label class="catalog-filters-label">
                 <input
@@ -168,6 +168,7 @@
                   type="number"
                   value="0"
                   id="range-from"
+                  name="price-from"
                 /></div>
                 <div class="range-input-wrapper">
                 <label class="visually-hidden" for="range-to"></label>
@@ -175,16 +176,17 @@
                   class="range-input"
                   type="number"
                   value="9000"
-                  id="range-to"/>
+                  id="range-to"
+                  name="price-to"/>
                 </div>
               </div>
               <div class="range">
                 <div class="range-scale">
                   <div class="range-bar" style="left: 10px; width: 206px">
-                    <button class="range-toggle toggle-min">
+                    <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
-                    <button class="range-toggle toggle-max">
+                    <button class="range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену.</span>
                     </button>
                   </div>
@@ -275,7 +277,7 @@
               <span class="products-card-type">Гостиница</span>
               <span class="products-card-price">От 4000 ₽</span>
               <a class="products-card-more" href="#">Подробнее</a>
-              <button class="products-card-favourite">В избранное</button>
+              <button class="products-card-favourite" type="button">В избранное</button>
               <div class="products-card-stars products-card-stars-four">
                 <span class="visually-hidden">4 звезды.</span>
               </div>
@@ -296,7 +298,7 @@
               <span class="products-card-price">От 5000 ₽</span>
               <a class="products-card-more" href="#">Подробнее</a>
               <button
-                class="products-card-favourite products-card-favourite-active"
+                class="products-card-favourite products-card-favourite-active" type="button"
               >
                 В избранном
               </button>
@@ -319,7 +321,7 @@
               <span class="products-card-type">Гостиница</span>
               <span class="products-card-price">От 2500 ₽</span>
               <a class="products-card-more" href="#">Подробнее</a>
-              <button class="products-card-favourite">В избранное</button>
+              <button class="products-card-favourite" type="button">В избранное</button>
               <div class="products-card-stars products-card-stars-three">
                 <span class="visually-hidden">3 звезды.</span>
               </div>
@@ -339,7 +341,7 @@
               <span class="products-card-type">Гостиница</span>
               <span class="products-card-price">От 1500 ₽</span>
               <a class="products-card-more" href="#">Подробнее</a>
-              <button class="products-card-favourite">В избранное</button>
+              <button class="products-card-favourite" type="button">В избранное</button>
               <div class="products-card-stars products-card-stars-two">
                 <span class="visually-hidden">2 звезды.</span>
               </div>
