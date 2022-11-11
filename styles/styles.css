@@ -516,6 +516,7 @@ body {
 .social {
   margin: 0;
   padding: 0;
+  max-width: 141px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -991,7 +992,7 @@ body {
 
 .products-sorting {
   margin-left: auto;
-  padding: 11px 26px 11px 16px;
+  padding: 11px 44px 11px 16px;
   width: 292px;
   font-family: inherit;
   font-size: 18px;
