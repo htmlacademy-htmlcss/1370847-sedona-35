@@ -6,7 +6,6 @@
   font-display: swap;
 }
 
-
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -210,7 +209,7 @@ body {
 
 .welcome {
   padding: 51px 0 82px;
-  background: url("../images/index-background-bottom.svg") center calc(100% + 2px) no-repeat,
+  background: url("../images/index-background-bottom.svg") center calc(100% + 1px) no-repeat,
     url("../images/index-background.jpg") center/cover no-repeat;
   background-color: #3f5e72;
   color: #ffffff;
@@ -519,6 +518,7 @@ body {
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .social-link {
@@ -655,6 +655,26 @@ body {
   background: url("../images/icons/breadcrumbs.svg") center center/contain no-repeat;
 }
 
+.breadcrumbs-item-home:not(:last-child)::after {
+  margin-left: 2px;
+}
+
+.breadcrumbs-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.breadcrumbs-link-home {
+  position: relative;
+  left: -4px;
+  width: 21px;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
 .breadcrumbs-link:hover .breadcrumbs-icon {
   fill: rgba(255, 255, 255, 0.8);
 }
@@ -697,7 +717,8 @@ body {
   outline: none;
 }
 
-.catalog-filters-label:focus .catalog-filters-mark {
+.catalog-filters-checkbox:focus + .catalog-filters-mark,
+.catalog-filters-radio:focus + .catalog-filters-mark {
   box-shadow: 0 0 0 3px #83b3d3;
 }
 
@@ -970,7 +991,7 @@ body {
 
 .products-sorting {
   margin-left: auto;
-  padding: 11px 16px;
+  padding: 11px 26px 11px 16px;
   width: 292px;
   font-family: inherit;
   font-size: 18px;
@@ -1003,6 +1024,7 @@ body {
 .products-view {
   margin-left: 70px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -1209,16 +1231,9 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  gap: 8px;
   align-items: center;
   text-align: center;
-}
-
-.pagination-item {
-  margin: 0 8px 0 0;
-}
-
-.pagination-item:last-child {
-  margin-right: 0;
 }
 
 .pagination-link {
@@ -1253,8 +1268,12 @@ body {
   background-color: #f2f2f2;
 }
 
+.pagination-link-current:hover {
+  background-color: #f2f2f2;
+}
+
 .pagination-item-dots {
-  margin: 0 8px 0 0;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1576,6 +1595,7 @@ body {
 .search-form-submit {
   padding: 18px;
   width: 100%;
+  font-family: inherit;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
